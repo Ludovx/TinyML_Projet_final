@@ -97,3 +97,38 @@ Nous avons donc sélectionner le modèle marqué avec l'étoile jaune et cela no
 ![image](https://user-images.githubusercontent.com/92917769/216775551-51f30b01-1d21-4597-ab0b-69ab0ff68a31.png)
 ![image](https://user-images.githubusercontent.com/92917769/216775558-3efd1ec9-686a-4644-a174-fb3aceb97516.png)
 
+
+
+
+
+
+
+
+
+
+
+
+ICI 
+
+
+
+
+Nous avons décider de fouiller puis d'utiliser les outils mis à notre disposition tel que le EON Tuner qui permet de calculer et comparer différents paramétrages pour le model, dans le cas présent il s'agit d'utiliser des images RGB ou en niveaux de gris, ainsi que d'autres paramètres plus poussés. Nous rentrons les caractéristiques de l'arduino sur le quel le model devra fonctionner ainsi que les limites en temps de calculs, en ram et en rom que l'on désire.
+Une fois lancer, EON Tuner nous sort les résultats :
+![image](https://user-images.githubusercontent.com/84172586/216776585-a1d8d559-568f-4f2d-85ab-997c0bffd3e6.png)
+![image](https://user-images.githubusercontent.com/84172586/216776614-be341f05-0194-4759-bb56-f9cfac294815.png)
+![image](https://user-images.githubusercontent.com/84172586/216776663-9d9ee045-fb8b-49b5-b645-d7e862fa0fc6.png)
+
+Parmis les résultats, nous avons décider de ne prendre que ceux avec un taux de réussite de plus de 90%, et nous avons opté pour celui demandant le moins de RAM, afin de ne pas trop solicité l'arduino, qui en plus doit compiler du code et faire fonctioner une camera (nécéssitant beaucoup de RAM).
+
+Avec le model choisi parmis ceux proposé par EON Tuner, nous obtenons ces résultats :
+![image](https://user-images.githubusercontent.com/84172586/216776745-298e6654-06aa-4dc0-a09d-6bd013381d3a.png)
+![image](https://user-images.githubusercontent.com/84172586/216776755-ae6c5f0b-92c6-49c3-b482-8e9d521cca0f.png)
+![image](https://user-images.githubusercontent.com/84172586/216776765-9a2b778f-adbc-4a17-b490-6a17d018942a.png)
+
+
+Pour tester et pousser le model dans ses limites, nous avons utilisé l'outils de classification en temps réel de EDGE Impulse :
+![image](https://user-images.githubusercontent.com/84172586/216776822-ca0c364a-79b0-49a5-9f45-6eca642a39a7.png)
+![image](https://user-images.githubusercontent.com/84172586/216776831-966e3c55-6b4e-47df-8df5-c4a0992d4a16.png)
+
+Les résultats et l'interprétation de l'IA ne sont pas concluantes. 
