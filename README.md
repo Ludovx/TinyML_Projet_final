@@ -71,9 +71,7 @@ En cherchant la documentation précise de la caméra, nous n'avons trouvé que c
 En faisant l'hypothèse que cette configuration est aussi celle de notre caméra OV7675, alors les pins sont bien définis dans la librairie et le problème ne vient pas de là. 
 
 Nous avons ensuite décidé de refaire un modèle plus léger pour tenter de l'utiliser sur l'Arduino. 
-Nous avons donc eu l'idée de convertir les images en niveaux de gris :
-
-![image](https://user-images.githubusercontent.com/92917769/216774946-05acd709-8191-4a7a-a786-f4945f30275b.png)
+Nous avons donc eu l'idée de convertir les images en niveaux de gris.
 
 Nous avons obtenu les résultats suivants :
 
@@ -117,13 +115,25 @@ Les résultats et l'interprétation de l'IA ne sont pas concluants pour certaine
 
 Nous avons tout de même décidé d'importer le code sur l'Arduino et nous avons obtenu les résultats suivants :
 
+Pour une photo prise dans le vide :
 
+![image](https://user-images.githubusercontent.com/92917769/216821810-760f6176-87b6-426b-bdb3-a6a27974487e.png)
+
+Pour une photo de grain de beauté :
+
+![image](https://user-images.githubusercontent.com/92917769/216821837-6a400d84-5cc8-4caa-8cb3-1bff05899506.png)
+
+Pour une photo de peau :
+
+![image](https://user-images.githubusercontent.com/92917769/216821865-25a73042-e4d8-42c0-b50f-9b91fc17302d.png)
+
+Les résultats ne sont pas parfaitement concluants mais tout de même satisfaisants.
 
 Cette fois-ci, nous n'avons pas eu d'erreur de mémoire car, en effet, notre code a une taille inférieure à 256KB qui est la taille maximale de la mémoire de notre carte Arduino. 
 
 Le code que nous avons utilisé est donc celui fournis par Edge Impulse auquel nous avons rajouté quelques lignes pour faire clignoter la LED quand le modèle détermine un cancer avec une certitude supérieure ou égale à 80% :
 
-![image](https://user-images.githubusercontent.com/92917769/216820811-9affed6a-8a6d-4544-84d3-6adbb208b6da.png)
+![image](https://user-images.githubusercontent.com/92917769/216822126-cc9c2320-f196-4e38-9e0a-f952ffa89f5e.png)
 
 En parallèle, nous avons aussi générer un modèle à partir de Google Collab et nous nous sommes appuyé sur le lien suivant :
 https://colab.research.google.com/gist/gheesung/eb0076e040ba53d5be2ad2db1c70cf82/image-classification-with-sipeed-maix-using-mobilenetv1.ipynb
