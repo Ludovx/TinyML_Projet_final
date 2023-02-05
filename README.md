@@ -14,6 +14,7 @@ Afin de détecter les potentielles cellules cancéreuses, nous allons utiliser u
 Dans un premier temps, nous avons essayé de récupérer des images avec la caméra OV7675 pour constituer une base de données pour entraîner le modèle. 
 
 Il s'avère que la focale de la caméra ne permettait pas de prendre des images aussi près de la peau :
+
 ![image](https://user-images.githubusercontent.com/92917769/216774862-c42121de-5788-42d9-b48d-96cd29c23446.png)
 
 Nous avons donc utiliser une base de données récupérée sur Kaggle qui a permis d'entraîner le modèle. 
