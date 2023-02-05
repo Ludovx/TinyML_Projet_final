@@ -15,6 +15,8 @@ Les résultats sont à retrouver :
   - dans le dossier "Edge_Impulse_model_and_library\Projet_final_inferencing\examples\nano_ble33_sense\nano_ble33_sense_camera" pour le code Arduino Edge Impulse
   - dans le dossier "Google_collab_tflite_model" pour le modèle tflite Google Collab
 
+Les autres résultats sont à retrouver ci-dessous sous forme de screen et documentation.
+
 # 1. Création et entraînement du modèle sur Edge Impulse
 
 Dans un premier temps, nous avons essayé de récupérer des images avec la caméra OV7675 pour constituer une base de données pour entraîner le modèle. 
