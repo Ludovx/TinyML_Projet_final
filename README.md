@@ -9,6 +9,12 @@ Pour ce faire, nous disposons du matériel suivant :
 
 Afin de détecter les potentielles cellules cancéreuses, nous allons utiliser un IA entraîner à les détecter sur des images qui seront prises en temps réel avec la caméra OV7675 du kit. Dans un premier temps, pour entraîner et concevoir le modèle de l'IA, nous allons utiliser Edge Impulse. Ensuite, nous allons développer un code Arduino qui tuilise le modèle entraîné pour détecter les anomalies de peau. 
 
+# Les résultats
+
+Les résultats sont à retrouver :
+  - dans le dossier "Edge_Impulse_model_and_library\Projet_final_inferencing\examples\nano_ble33_sense\nano_ble33_sense_camera" pour le code Arduino Edge Impulse
+  - dans le dossier "Google_collab_tflite_model" pour le modèle tflite Google Collab
+
 # 1. Création et entraînement du modèle sur Edge Impulse
 
 Dans un premier temps, nous avons essayé de récupérer des images avec la caméra OV7675 pour constituer une base de données pour entraîner le modèle. 
