@@ -86,33 +86,6 @@ La deuxième image est une image de grain de beauté. Le modèle a bien répondu
 La deuxième image est une image de peau normale. Le modèle a bien répondu :
 
 
-
-Suite à ce nouvel échec, nous avons décidé de demander à Edge Impulse d'analyser le meilleur modèle pour notre Arduino :
-
-![image](https://user-images.githubusercontent.com/92917769/216775491-a63ff503-47ab-4437-923e-d502d39ab4c2.png)
-
-Nous avons donc sélectionner le modèle marqué avec l'étoile jaune et cela nous a donné les résultats suivants :
-
-![image](https://user-images.githubusercontent.com/92917769/216775535-d1e4b4fd-0f26-4cfd-a1de-beb02a8f2889.png)
-![image](https://user-images.githubusercontent.com/92917769/216775551-51f30b01-1d21-4597-ab0b-69ab0ff68a31.png)
-![image](https://user-images.githubusercontent.com/92917769/216775558-3efd1ec9-686a-4644-a174-fb3aceb97516.png)
-
-
-
-
-
-
-
-
-
-
-
-
-ICI 
-
-
-
-
 Nous avons décider de fouiller puis d'utiliser les outils mis à notre disposition tel que le EON Tuner qui permet de calculer et comparer différents paramétrages pour le model, dans le cas présent il s'agit d'utiliser des images RGB ou en niveaux de gris, ainsi que d'autres paramètres plus poussés. Nous rentrons les caractéristiques de l'arduino sur le quel le model devra fonctionner ainsi que les limites en temps de calculs, en ram et en rom que l'on désire.
 Une fois lancer, EON Tuner nous sort les résultats :
 ![image](https://user-images.githubusercontent.com/84172586/216776585-a1d8d559-568f-4f2d-85ab-997c0bffd3e6.png)
@@ -131,4 +104,19 @@ Pour tester et pousser le model dans ses limites, nous avons utilisé l'outils d
 ![image](https://user-images.githubusercontent.com/84172586/216776822-ca0c364a-79b0-49a5-9f45-6eca642a39a7.png)
 ![image](https://user-images.githubusercontent.com/84172586/216776831-966e3c55-6b4e-47df-8df5-c4a0992d4a16.png)
 
-Les résultats et l'interprétation de l'IA ne sont pas concluantes. 
+Les résultats et l'interprétation de l'IA ne sont pas concluants pour certaines photos. Cela peut s'expliquer en partie par la mauvaise qualité de la caméra. 
+
+Nous avons tout de même décidé d'importer le code sur l'Arduino et nous avons obtenu les résultats suivants :
+
+
+
+Cette fois-ci, nous n'avons pas eu d'erreur de mémoire car, en effet, notre code a une taille inférieure à 256KB qui est la taille maximale de la mémoire de notre carte Arduino. 
+
+Le code que nous avons utilisé est donc celui fournis par Edge Impulse auquel nous avons rajouté quelques lignes pour faire clignoter la LED quand le modèle détermine un cancer avec une certitude supérieure ou égale à 80% :
+
+![image](https://user-images.githubusercontent.com/92917769/216820811-9affed6a-8a6d-4544-84d3-6adbb208b6da.png)
+
+En parallèle, nous avons aussi générer un modèle à partir de Google Collab et nous nous sommes appuyé sur le lien suivant :
+https://colab.research.google.com/gist/gheesung/eb0076e040ba53d5be2ad2db1c70cf82/image-classification-with-sipeed-maix-using-mobilenetv1.ipynb
+
+Nous avons réussi à générer un modèle à partir des images de la base de données Kaggle. 
